@@ -1,0 +1,5 @@
+{% load static %}
+
+{% for item in path %}
+  <script type="text/javascript" src="{% static item %}"></script>
+{% endfor %}

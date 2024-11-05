@@ -1,0 +1,107 @@
+/* Checkbox */
+.k-input-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  width: fit-content;
+  margin-bottom: 0;
+  min-width: 200px;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Checkbox - disabled */
+.k-input-checkbox.k-input-checkbox__disabled,
+.k-input-checkbox.k-input-checkbox__disabled * {
+  color: var(--k-color-neutral-600);
+  cursor: not-allowed;
+}
+
+/* Label */
+.k-input-checkbox .k-input-checkbox__label * {
+  margin: 0;
+}
+
+/* Input */
+.k-input-checkbox input[type='checkbox'] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--k-color-neutral-50);
+  margin: 0;
+
+  font: inherit;
+  color: currentColor;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--k-color-neutral-600);
+  border-radius: 4px;
+  display: grid;
+  place-content: center;
+
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+/* Input - hover */
+.k-input-checkbox input[type='checkbox']:hover:not(:disabled) {
+  border-color: var(--k-color-primary-500);
+  transition: all 0.3s;
+}
+
+/* Input - checked */
+.k-input-checkbox input[type='checkbox']:checked {
+  transform: scale(1);
+  background-color: var(--k-color-primary-500);
+  border-color: var(--k-color-primary-500);
+}
+
+
+/* Input - focus - focus-visible */
+.k-input-checkbox input[type='checkbox']:where(:focus, :focus-visible) {
+  box-shadow: 0 0 0 4px var(--k-color-focused-outline);
+  outline: none;
+}
+
+/* Input - disabled */
+.k-input-checkbox input[type='checkbox']:disabled {
+  cursor: not-allowed;
+  background-color: var(--k-color-neutral-200);
+  border-color: var(--k-color-neutral-600);
+}
+
+/* Marker - checked */
+.k-input-checkbox input[type='checkbox']::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  background-color: var(--k-color-primary-500);
+}
+
+.k-input-checkbox input[type='checkbox']:checked:not(:disabled)::before {
+  transform: scale(1);
+  background-color: var(--k-color-neutral-50);
+}
+
+/* Marker - checked -disabled */
+.k-input-checkbox input[type='checkbox']:checked:disabled::before {
+  transform: scale(1);
+  background-color: var(--k-color-neutral-700);
+}
+
+/* Marker - indeterminate */
+.k-input-checkbox input[type='checkbox'][indeterminate]:not(:checked)::before {
+  clip-path: inset(0);
+  transform: scale(1);
+  background-color: var(--k-color-primary-500);
+}
+
+/* Marker - disabled */
+.k-input-checkbox input[type='checkbox'][indeterminate]:disabled::before {
+  clip-path: inset(0);
+  transform: scale(1);
+  background-color: var(--k-color-neutral-700);
+}

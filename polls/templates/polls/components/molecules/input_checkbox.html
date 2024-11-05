@@ -1,0 +1,16 @@
+{% load atoms_tags %}
+
+<label class="k-input-checkbox {% if disabled %}k-input-checkbox__disabled{% endif %}">
+  <input 
+    type="checkbox" 
+    name="checkbox" 
+    {% if disabled %}disabled{% endif %} 
+    {% if checked and not indeterminate %}checked{% endif %} 
+    {% if indeterminate %}indeterminate{% endif %}
+  />
+  {% if label %}
+    <span class="k-input-checkbox__label">
+      {% text label type='default' size='1' %}
+    </span>
+  {% endif %}
+</label>

@@ -1,0 +1,41 @@
+.k-title {
+  font-family: "Roboto", sans-serif;
+  color: var(--k-color-neutral-900);
+}
+
+.k-title__size--1 {
+  font-size: var(--k-title-size-1);
+  line-height: var(--k-title-height-1);
+}
+
+.k-title__size--2 {
+  font-size: var(--k-title-size-2);
+  line-height: var(--k-title-height-2);
+}
+
+.k-title__size--3 {
+  font-size: var(--k-title-size-3);
+  line-height: var(--k-title-height-3);
+}
+
+.k-title__size--4 {
+  font-size: var(--k-title-size-4);
+  line-height: var(--k-title-height-4);
+}
+
+.k-title__size--5 {
+  font-size: var(--k-title-size-5);
+  line-height: var(--k-title-height-5);
+}
+
+.k-title__style--bold {
+  font-weight: var(--k-weight-bold);
+}
+
+.k-title__style--normal {
+  font-weight: var(--k-weight-default);
+}
+
+.k-title__style--black {
+  font-weight: var(--k-weight-black);
+}

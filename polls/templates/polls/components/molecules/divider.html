@@ -1,0 +1,31 @@
+{% load atoms_tags %}
+
+<div class="k-divider">
+  {% if type == 'horizontal' and title and orientation == 'center' %}
+    <div class="k-divider-horizontal">
+      <span class="k-divider-horizontal__line--full k-divider-horizontal__line"></span>
+      <span class="k-divider-horizontal__title">{% text title type='default' size='1' %}</span>
+      <span class="k-divider-horizontal__line--full k-divider-horizontal__line"></span>
+    </div>
+  {% elif type == 'horizontal' and title and orientation == 'left' %}
+    <div class="k-divider-horizontal">
+      <span class="k-divider-horizontal__line--short k-divider-horizontal__line"></span>
+      <span class="k-divider-horizontal__title">{% text title type='default' size='1' %}</span>
+      <span class="k-divider-horizontal__line--full k-divider-horizontal__line"></span>
+    </div>
+  {% elif type == 'horizontal' and title and orientation == 'right' %}
+    <div class="k-divider-horizontal">
+      <span class="k-divider-horizontal__line--full k-divider-horizontal__line"></span>
+      <span class="k-divider-horizontal__title">{% text title type='default' size='1' %}</span>
+      <span class="k-divider-horizontal__line--short k-divider-horizontal__line"></span>
+    </div>
+  {% elif type == 'horizontal' and not title %}
+    <div class="k-divider-horizontal">
+      <span class="k-divider-horizontal__line--full k-divider-horizontal__line"></span>
+    </div>
+  {% elif type == 'vertical' %}
+    <div class="k-divider-vertical">
+      <span class="k-divider-vertical__line"></span>
+    </div>
+  {% endif %}
+</div>

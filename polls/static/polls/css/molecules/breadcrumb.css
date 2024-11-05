@@ -1,0 +1,27 @@
+.k-breadcrumb{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.k-breadcrumb p{
+  margin-bottom: 0px;
+}
+
+.k-breadcrumb__item{
+  color: var(--k-color-neutral-700);
+  margin-left: 4px; 
+}
+
+.k-breadcrumb__item--active{
+  margin-left: 4px;
+}
+
+.k-breadcrumb__divider{
+  color: var(--k-color-neutral-700);
+  margin: 0px 4px;
+}
+
+.k-breadcrumb__item-title *{
+  color: var(--k-color-neutral-700);
+}
+

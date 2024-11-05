@@ -1,0 +1,29 @@
+{% load atoms_tags %}
+
+<div class="dropdown k-dropdown">
+    {% if type == 'secondary' %}
+        <button class="btn dropdown-toggle k-dropdown__button k-dropdown__button--secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {% text title type='default' size='1' %}
+            <i class="bi bi-chevron-down"></i>
+        </button>
+    {% elif type == 'primary' %}
+        <button class="btn dropdown-toggle k-dropdown__button k-dropdown__button--primary" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {% text title type='default' size='1' %}
+            <i class="bi bi-chevron-down k-dropdown__icon"></i>
+        </button>
+    {% elif type == 'borderless' %}
+        <button class="btn dropdown-toggle k-dropdown__button k-dropdown__button--borderless" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {% text title type='default' size='1' %}
+            <i class="bi bi-chevron-down"></i>
+        </button>
+    {% elif type == 'icon' %}
+        <button class="btn dropdown-toggle k-dropdown__button k-dropdown__button--icon" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="bi bi-chevron-down"></i>
+        </button>    
+    {% endif %}
+    <div class="dropdown-menu k-dropdown__menu" aria-labelledby="dropdownMenuButton">
+        {% for item in items %}
+            <a class="dropdown-item {% if item.disabled %} disabled {% endif %} {% if item.active %} active {% endif %}" href="#">{{ item.label }}</a>
+        {% endfor %}
+    </div>
+</div>

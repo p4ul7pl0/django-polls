@@ -1,0 +1,5 @@
+{% load static %}
+
+{% for item in path %}
+  <link rel="stylesheet" type="text/css" href="{% static item %}" />
+{% endfor %}

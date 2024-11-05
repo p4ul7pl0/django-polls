@@ -1,0 +1,14 @@
+{% load molecules_tags %}
+
+<div class="k-input-search">
+    {% base_input 
+        html_attrs|safeseq|join:" " 
+        type="search" 
+        right_icon="bi bi-search" 
+        on_right_icon_click="handleSearch(this)" 
+        placeholder=placeholder 
+        disabled=disabled 
+        value=value error=error 
+        left_icon=left_icon
+    %}
+</div>

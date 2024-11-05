@@ -1,0 +1,13 @@
+{% load molecules_tags %}
+
+<div class="k-input-number {% if disabled %}k-input-number__disabled{% endif %}">
+    {% base_input html_attrs|safeseq|join:" " type="number" placeholder=placeholder left_icon=left_icon value=value disabled=disabled error=error %}
+    <div class="k-input-number__controls-wrap" onmouseenter="focusParentInput(this)" onmouseleave="blurParentInput(this)">
+        <div class="k-input-number__control" onclick="increaseInputNumber(this)">
+            <i class="bi bi-chevron-up"></i>
+        </div>
+        <div class="k-input-number__control" onclick="decreaseInputNumber(this)">
+            <i class="bi bi-chevron-down"></i>
+        </div>
+    </div>
+</div>

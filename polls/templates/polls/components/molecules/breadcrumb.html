@@ -1,0 +1,19 @@
+{% load atoms_tags %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb bg-transparent k-breadcrumb">
+        {% if type == '2' %}									
+            <li class="breadcrumb-item k-breadcrumb__item">
+                <span class="k-breadcrumb__item-title">{% text item1 type='default' size='1' %}</span></li>
+            <li class="k-breadcrumb__divider" >/</li>
+            <li class="breadcrumb-item-active k-breadcrumb__item--active">{% text item2 type='default' size='1' %}</li>
+        {% elif type == '3' and item3 %}
+            <li class="breadcrumb-item k-breadcrumb__item">
+                <span class="k-breadcrumb__item-title">{% text item1 type='default' size='1' %}</span></li>
+            <li class="k-breadcrumb__divider" >/</li>
+            <li class="breadcrumb-item k-breadcrumb__item">
+                <span class="k-breadcrumb__item-title">{% text item2 type='default' size='1' %}</span></li>
+            <li class="k-breadcrumb__divider" >/</li>
+            <li class="breadcrumb-item-active k-breadcrumb__item--active">{% text item3 type='default' size='1' %}</li>
+        {% endif %}									
+    </ol>
+</nav>

@@ -1,0 +1,11 @@
+{% if size == '1' %}
+  <h1 class="k-title k-title__size--{{ size }} k-title__style--{{ style }}">{{ title }}</h1>
+{% elif size == '2' %}
+  <h2 class="k-title k-title__size--{{ size }} k-title__style--{{ style }}">{{ title }}</h2>
+{% elif size == '3' %}
+  <h3 class="k-title k-title__size--{{ size }} k-title__style--{{ style }}">{{ title }}</h3>
+{% elif size == '4' %}
+  <h4 class="k-title k-title__size--{{ size }} k-title__style--{{ style }}">{{ title }}</h4>
+{% elif size == '5' %}
+  <h5 class="k-title k-title__size--{{ size }} k-title__style--{{ style }}">{{ title }}</h5>
+{% endif %}

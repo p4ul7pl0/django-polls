@@ -1,0 +1,72 @@
+
+/* Remove default controls */
+.k-input-number input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+.k-input-number input[type="number"]::-webkit-outer-spin-button,
+.k-input-number input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+/* Input Number - sizes */
+.k-input-number {
+    position: relative;
+    min-width: 200px;
+    width: 100%;
+    max-width: 600px;
+}
+  
+/* Input Number Controls Wrap - position */
+.k-input-number__controls-wrap {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out; 
+    margin: 1px 1px 1px 0;
+}
+/* Input Number Controls Wrap - hover */
+.k-input-number:hover .k-input-number__controls-wrap {
+    opacity: 1;
+    transition: all 0.3s ease-in-out; 
+}
+/* Input Number Controls Wrap - disabled */
+.k-input-number__disabled .k-input-number__controls-wrap {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Input Number Control - hover */
+.k-input-number .k-input-number__controls-wrap .k-input-number__control:hover i {
+    color: var(--k-color-primary-500);
+    font-weight: var(--k-weight-bold);
+}
+/* Input Number Control - styles */
+.k-input-number__control {
+    font-size: 12px;
+    line-height: 12px;
+    padding: 1px 4.5px;
+    color: var(--k-color-neutral-700);
+    background-color: var(--k-color-neutral-100);
+}
+.k-input-number__control:first-child {
+    border-bottom: 0.5px solid var(--k-color-neutral-400);
+    border-left: 1px solid var(--k-color-neutral-400);
+    border-radius: 0 4px 0px 0;
+}
+.k-input-number__control:last-child {
+    border-top: 0.5px solid var(--k-color-neutral-400);
+    border-left: 1px solid var(--k-color-neutral-400);
+    border-radius: 0 0px 4px 0;
+}
+
+/* Base Input */
+.k-input-number .k-base-input input {
+    padding-right: calc(21px + 4px);
+}

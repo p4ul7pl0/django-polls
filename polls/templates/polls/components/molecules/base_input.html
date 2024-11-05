@@ -1,0 +1,10 @@
+
+<div class="k-base-input {% if left_icon %}k-base-input__with--left-icon{% endif %} {% if right_icon %}k-base-input__with--right-icon{% endif %} {% if disabled %}k-base-input__disabled{% endif %}" onmouseleave="blurChildInput(this)">
+  {% if left_icon %}
+  <i class="k-base-input__icon {{ left_icon }}"></i>
+  {% endif %}
+  <input {% include "django/forms/widgets/attrs.html" %} {% for attr in html_attrs %}{{attr}}{% endfor %} type="{{ type }}" placeholder="{{ placeholder }}" class="k-base-input__placeholder {% if error %}k-base-input__error{% endif %}" {% if disabled %}disabled{% endif %} {% if value %}value="{{ value }}"{% endif %}>
+  {% if right_icon %}
+  <i class="k-base-input__icon {{ right_icon }}" {% if right_icon and on_right_icon_click %}onClick="{{on_right_icon_click}}"{% endif %}></i>
+  {% endif %}
+</div>

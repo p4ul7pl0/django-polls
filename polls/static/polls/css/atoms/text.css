@@ -1,0 +1,31 @@
+.k-text {
+  font-family: "Roboto", sans-serif;
+  color: var(--k-color-neutral-900);
+}
+
+.k-text__size--1 {
+  font-size: var(--k-text-size-1);
+  line-height: var(--k-text-height-1);
+}
+
+.k-text__size--2 {
+  font-size: var(--k-text-size-2);
+  line-height: var(--tk-ext-height-2);
+}
+
+.k-text__size--3 {
+  font-size: var(--k-text-size-3);
+  line-height: var(--k-text-height-3);
+}
+
+.k-text__style--bold {
+  font-weight: var(--k-weight-bold);
+}
+
+.k-text__style--normal {
+  font-weight: var(--k-weight-default);
+}
+
+.k-text__style--black {
+  font-weight: var(--k-weight-black);
+}

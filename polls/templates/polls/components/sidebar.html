@@ -1,0 +1,44 @@
+{% load i18n%}
+
+<nav id="sidebar-wrapper" class="border-end bg-white">
+    <div class="sidebar-heading">
+        <b>BB-Central</b>
+    </div>
+
+    <div class="list-group list-group-flush">
+   		{% if perms.common.view_bbcentralapi or perms.common.view_emailclient or perms.common.can_create_backup or perms.can_restore_backup %}
+			<a class="list-group-item list-group-item-action list-group-item-light p-3 {% if '/general/' in request.path %}active{% endif %}"
+    			href="/general/">{% trans "General" %}</a>
+    	{% endif %}
+
+    	{% if perms.common.view_peer %}
+			<a class="list-group-item list-group-item-action list-group-item-light p-3 {% if '/peer/' in request.path %}active{% endif %}"
+    			href="/peer/">{% trans "Peers" %}</a>
+    	{% endif %}
+
+		{% if perms.common.view_peergroup %}
+	    	<a class="list-group-item list-group-item-action list-group-item-light p-3 {% if '/peer_group/' in request.path %}active{% endif %}"
+	    		href="/peer_group/">{% trans "Peer Groups" %}</a>
+    	{% endif %}
+
+		{% if perms.common.view_peerconnection %}
+   			<a class="list-group-item list-group-item-action list-group-item-light p-3 {%  if '/peer_connection/' in request.path %}active{% endif %}"
+   				href="/peer_connection/">{% trans "Peer Connections" %}</a>
+   		{% endif %}
+   		
+   		{% if perms.auth.view_user %}
+		   	<a class="list-group-item list-group-item-action list-group-item-light p-3 {%  if '/user/' in request.path %}active{% endif %}"
+				href="/user/">{% trans "Users" %}</a>
+		{% endif %}
+		
+		{% if perms.auth.view_group %}
+		   	<a class="list-group-item list-group-item-action list-group-item-light p-3 {%  if '/user_group/' in request.path %}active{% endif %}"
+				href="/user_group/">{% trans "User Groups" %}</a>
+		{% endif %}
+
+		{% if perms.common.can_recover_log %}
+		   	<a class="list-group-item list-group-item-action list-group-item-light p-3 {%  if '/utils/' in request.path %}active{% endif %}"
+				href="/utils/">{% trans "Utilities" %}</a>
+		{% endif %}
+    </div>
+</nav>

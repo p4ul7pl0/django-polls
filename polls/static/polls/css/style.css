@@ -1,0 +1,566 @@
+/* ---------------------------------------------------
+    BODY STYLE
+----------------------------------------------------- */
+
+body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    background: #f0f1f3;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: #f8f9fa;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -17.5rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+}
+
+#sidebarToggle {
+    border: 0;
+    outline: none;
+    padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+#sidebarTogle:focus {
+    border: 0;
+    outline: none;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1rem;
+    font-size: 1.2rem;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1rem;
+    border: 0;
+}
+
+#sidebar-wrapper .list-group {
+    width: 15.5rem;
+}
+
+#sidebar-wrapper .list-group>.list-group-item {
+    color: #000000;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.list-group-item-light.list-group-item-action.active {
+    color: #1980FF !important;
+    background-color: #F3F6FA;
+    border-radius: 10px;
+}
+
+#sidebar-wrapper .list-group>.list-group-item:hover {
+    background-color: transparent;
+}
+
+.list-group-flush {
+    border-radius: 0;
+}
+
+.list-group-flush>.list-group-item {
+    border: 0;
+}
+
+.list-group-flush>.list-group-item:last-child {
+    border-bottom-width: 0;
+}
+
+body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
+    margin-left: 0;
+}
+
+
+/* ---------------------------------------------------
+    LOGIN STYLE
+----------------------------------------------------- */
+
+.login-form {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.errorlist {
+    overflow-wrap: break-word;
+    font-size: 12px !important;
+    color: red;
+    list-style-type: none;
+    /* padding-left: 5px; */
+}
+
+.login-form #id_button_login:disabled {
+    color: #6c757d !important;
+    background-color: #efefef !important;
+    border-color: #efefef !important;
+}
+
+.login-form input.form-control:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+[type=text].form-control:focus,
+[type=password].form-control:focus,
+[type=email].form-control:focus,
+[type=tel].form-control:focus,
+[contenteditable].form-control:focus {
+    box-shadow: inset 0 -1px 0 #ddd;
+    border-color: #efefef;
+}
+
+.login-slogan {
+    color: #ffffff;
+    background-color: #003354;
+    font-family: 'Antonio Regular', sans-serif;
+}
+
+.login-slogan>.d-flex>.row {
+    margin-bottom: 13rem;
+}
+
+#text-decorator {
+    height: 5px;
+    background-color: #1980FF;
+}
+
+.login-slogan #slogan-image{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width: 220px;
+}
+
+/* ---------------------------------------------------
+    NAVEBAR STYLE
+----------------------------------------------------- */
+
+.navbar select:focus {
+    box-shadow: inset 0 -1px 0 #ddd;
+    border-color: #efefef;
+}
+
+
+/* ---------------------------------------------------
+    PROFILE STYLE
+----------------------------------------------------- */
+
+.banner {
+    height: 140px;
+    background-color: #003354;
+    border-radius: 0;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.banner .profile {
+    width: 18.5rem;
+}
+
+.banner .profile-userpic {
+    float: none;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    background: #1980FF;
+    margin: 0 auto;
+    border-radius: 50% !important;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+}
+
+.banner .profile-usertitle {
+    text-align: center;
+}
+
+.banner .profile-usertitle-name {
+    color: #ffffff;
+    font-size: 16px;
+    padding-right:15px;
+}
+
+.banner .profile-usertitle-job {
+    text-transform: capitalize;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.banner h1 {
+    font-size: 1.6rem;
+}
+
+/* ---------------------------------------------------
+    CARD STYLE
+----------------------------------------------------- */
+.card{
+    position: relative;
+    z-index: 1;
+    margin-top: -2rem;
+    border-radius: 15px;
+}
+
+.card-body {
+	padding: 1.5vw;
+}
+
+/* ---------------------------------------------------
+    BUTTON STYLE
+----------------------------------------------------- */
+
+.btn-project {
+    background-color: #003354;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.btn-project:hover {
+    color: #ccc;
+}
+
+.btn-project:active {
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 0%);
+}
+
+.btn-project:focus {
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 0%);
+}
+
+.text-dark-blue {
+    background-color: #003354;
+}
+
+.text-color-blue {
+    color: rgb(35, 63, 117);
+}
+
+.icon-color {
+    color: #003354;
+    text-decoration: none !important;
+}
+
+.icon-color-red {
+    color: #9E0000;
+    text-decoration: none !important;
+}
+
+.icon-color-green {
+    color:  #055103;
+    text-decoration: none !important;
+}
+.icon-color-orange {
+    color: #CB6200;
+    text-decoration: none !important;
+}
+.icon-color:focus {
+    color: #1980FF;
+    text-decoration: none !important;
+}
+
+
+/* ---------------------------------------------------
+    TABLE STYLE
+----------------------------------------------------- */
+
+.table-customized {
+    border-collapse: separate;
+    border: 4px solid #fff;
+    
+}
+
+.table-customized th {
+    background-color: #EBEBEB;
+    border: 2px solid #EBEBEB;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.table-customized .th-head {
+    background-color: #FFFFFF!important;
+    border: 2px solid rgb(204, 204, 204) !important;
+}
+
+.table-customized td {
+    border: 2px solid rgb(204, 204, 204) !important;
+    width: 99%;
+}
+
+.dataTables_paginate .page-item.active .page-link {
+    background-color: #003354;
+    border-color: #003354;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3) !important;
+}
+
+td {
+	word-break: break-word;
+}
+
+th {
+	word-break: nowrap;
+}
+
+.action-td {
+	word-break: nowrap !important;
+	white-space: nowrap;
+}
+
+.status-td {
+	text-align: center;
+	word-break: nowrap !important;
+	white-space: nowrap;
+}
+
+.table>tbody>tr>td, 
+.table>tbody>tr>th, 
+.table>tfoot>tr>td, 
+.table>tfoot>tr>th, 
+.table>thead>tr>td, 
+.table>thead>tr>th {
+      vertical-align: middle;
+ }
+ 
+.network-table .form-group {
+	margin-bottom: 0px !important;
+}
+
+.modal-list {
+	padding: 12px; 
+	margin-bottom: 0px;
+}
+
+/* ---------------------------------------------------
+    MODAL STYLE
+----------------------------------------------------- */
+
+.modal .modal-content {
+    border-radius: 0.8rem !important;
+    border: 2px solid #EBEBEB !important;
+    -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3) !important;
+    -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3) !important;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3) !important;
+}
+
+@media (min-width: 576px) {
+    #id_file_current_1,
+    #id_file_name_1,
+    #id_file_current_2,
+    #id_file_name_2,
+    #id_file_current_3,
+    #id_file_name_3,
+    #id_file_current_4,
+    #id_file_name_4 {
+        overflow-wrap: break-word;
+    }
+    .banner .profile {
+        width: 17.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+    #sidebar-wrapper .list-group {
+        width: 15.5rem;
+    }
+    body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
+        margin-left: -17.5rem;
+    }
+    .banner .profile {
+        width: 17.5rem;
+    }
+}
+
+@media  (min-width: 992px){
+    .banner .profile {
+        width: 17.5rem;
+    }
+    .login-slogan #slogan-image{
+        width: 240px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .banner .profile {
+        width: 18.5rem;
+    }
+    body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
+        margin-left: -18.5rem;
+    }
+    #sidebar-wrapper .list-group {
+        width: 17.5rem;
+    }
+    .login-slogan #slogan-image{
+        width: 260px;
+    }
+}
+
+.card-calendar {
+	overflow:hidden;
+}
+  
+.card-warning-yellow:after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 0.6vw;
+  height: 0.6vw;
+  border-radius: 50%;
+  background: orange;
+  mix-blend-mode:darken;
+}
+
+.card-warning-red:after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 0.6vw;
+  height: 0.6vw;
+  border-radius: 50%;
+  background: red;
+  mix-blend-mode:darken;
+}
+
+.card-warning-blue:after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 0.6vw;
+  height: 0.6vw;
+  border-radius: 50%;
+  background: blue;
+  mix-blend-mode:darken;
+}
+
+.h-scroll {
+    height: 70vh; /* %-height of the viewport */
+    overflow-y: scroll;
+}
+
+.spinner {
+    width: 1rem;
+    height: 1rem;
+    border: 0.2rem solid;
+    border-color: #3d5af1 transparent #3d5af1 transparent;
+    border-radius: 50%;
+    animation: spin-anim 1.2s linear infinite;
+}
+
+@keyframes spin-anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* ---------------------------------------------------
+   COLORS STYLE
+----------------------------------------------------- */
+
+:root {
+    --k-color-primary-900: #002E4D;
+    --k-color-primary-500: #0073BE;
+    --k-color-primary-400: #298BCC;
+    --k-color-primary-300: #57A5D9;
+    --k-color-primary-200: #8AC1E5;
+    --k-color-primary-100: #CCEBFF;
+    --k-color-secondary-900: #005B80;
+    --k-color-secondary-500: #2DAEE1;
+    --k-color-secondary-400: #61C9F2;
+    --k-color-secondary-300: #91D7F2;
+    --k-color-secondary-200: #CCF0FF;
+    --k-color-secondary-100: #E5F8FF;
+    --k-color-success-900: #004D13;
+    --k-color-success-500: #009926;
+    --k-color-success-400: #21A642;
+    --k-color-success-300: #4CBF69;
+    --k-color-success-200: #7ACC8F;
+    --k-color-success-100: #C2F2CE;
+    --k-color-error-900: #660B0A;
+    --k-color-error-500: #B31312;
+    --k-color-error-400: #CC3E3D;
+    --k-color-error-300: #D96D6C;
+    --k-color-error-200: #F2AAAA;
+    --k-color-error-100: #FFE5E5;
+    --k-color-warning-900: #80341B;
+    --k-color-warning-500: #FC6736;
+    --k-color-warning-400: #FC8A65;
+    --k-color-warning-300: #FC9D7E;
+    --k-color-warning-200: #FCB097;
+    --k-color-warning-100: #FEE1D8;
+    --k-color-neutral-900: #000000;
+    --k-color-neutral-800: #4D4D4D;
+    --k-color-neutral-700: #808080;
+    --k-color-neutral-600: #B3B3B3;
+    --k-color-neutral-500: #BFBFBF;
+    --k-color-neutral-400: #CCCCCC;
+    --k-color-neutral-300: #E6E6E6;
+    --k-color-neutral-200: #F2F2F2;
+    --k-color-neutral-100: #F7F7F7;
+    --k-color-neutral-50: #FFFFFF;
+    --k-color-background: #F2F2F2;
+    --k-color-focused-outline: rgba(87, 165, 217, 20%);
+    --k-color-focused-error-outline: rgba(179, 19, 18, 20%);
+}
+
+/* ---------------------------------------------------
+   TYPOGRAPHY STYLE
+----------------------------------------------------- */
+:root {
+    --k-title-size-1: 38px;
+    --k-title-size-2: 30px;
+    --k-title-size-3: 24px;
+    --k-title-size-4: 20px;
+    --k-title-size-5: 16px;
+    --k-title-height-1: 46px;
+    --k-title-height-2: 40px;
+    --k-title-height-3: 32px;
+    --k-title-height-4: 28px;
+    --k-title-height-5: 24px;
+    --k-text-size-1: 14px;
+    --k-text-size-2: 12px;
+    --k-text-size-3: 8px;
+    --k-text-height-1: 22px;
+    --k-text-height-2: 20px;
+    --k-text-height-3: 12px;      
+    --k-weight-default: 400; 
+    --k-weight-bold: 700;
+    --k-weight-black: 900;
+
+    .font-weight-bold {
+        font-weight: var(--k-weight-bold);
+    }
+    .font-weight-normal {
+        font-weight: var(--k-weight-default);
+    }
+}

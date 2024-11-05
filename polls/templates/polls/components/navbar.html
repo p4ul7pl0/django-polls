@@ -1,0 +1,45 @@
+{% load static i18n %}
+
+<nav class="navbar navbar-expand  navbar-light bg-white">
+    <div class="container-fluid">
+        <a class="navbar-brand mx-4" href="#">
+            <figure class="figure m-0">
+                <img class="figure-img img-fluid m-0" src="{% static 'images/logo.png' %}" width="200" height="50" alt="Kryptus">
+            </figure>
+        </a>
+        <button class="ml-2" type="button" id="sidebarToggle" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="nav navbar-nav ml-auto mr-2 d-flex align-items-center">
+            {% if request.user.is_authenticated %}
+                {% get_current_language as LANGUAGE_CODE%}
+                <li class="nav-item d-none "><!--TODO: Change from d-none to d-sm-block when dual language is implemented-->
+                    <form class="my-auto" action="{% url 'set_language' %}" method="POST">{% csrf_token %}
+                        <input type="hidden" name="text" value="{{redirect_to}}">
+                        <select class="custom-select" name="language" id="id_languages">
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            {% for language in languages %}
+                                <option value="{{language.code}}" {% if language.code == LANGUAGE_CODE %} selected {% endif %}>
+                                    {{ language.code | upper }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </form>
+                </li>
+                <li class="nav-item dropdown dropleft float-right">
+                    <a class="nav-link" href="#" role="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="bi bi-gear-fill p-2"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#requestChangePassword" data-toggle="modal" data-target="#requestChangePassword">{% trans "Change Password" %}</a>
+                        <a class="dropdown-item" href="#requestSupportModal" data-toggle="modal" data-target="#requestSupportModal">{% trans "Request Support" %}</a>
+                        <a class="dropdown-item" href="/accounts/logout/">{% trans "Logout" %}</a>
+                    </div>
+                </li>
+            {% endif %}
+        </ul>
+
+    </div>
+</nav>
+
